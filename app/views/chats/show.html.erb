@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @chat.content %>
+</p>
+
+<%= link_to 'Edit', edit_chat_path(@chat) %> |
+<%= link_to 'Back', chats_path %>
+
+
+<!-- <ul id="messages"></ul>
+<input id="send"/>
+<button id="fire">Send</button> -->
+
+
+
+
+<div id="echo" data-uri="<%= request.host %>:<%= request.port %>/websocket">
+  <ul id="messages"></ul>
+  <input id="send"/>
+  <button id="fire">Send</button>
+</div>
