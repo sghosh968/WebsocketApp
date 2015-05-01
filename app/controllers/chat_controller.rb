@@ -1,0 +1,8 @@
+class ChatController < WebsocketRails::BaseController
+  def new_message
+    # Here we call the rails-websocket broadcast_message method
+    broadcast_message :new_message, 'Echo: ' + message
+    p "In new_message"
+    p message
+  end
+end
